@@ -1,8 +1,7 @@
 from fastapi import FastAPI, File, UploadFile
 from api.endpoints import processing_images
 from utils.save_image_temporal import save_in_disk
-from io import BytesIO
-import os
+
 
 app = FastAPI()
 

@@ -7,18 +7,6 @@ mp_hands = mp.solutions.hands
 
 
 def obtenerAngulos(results, width, height):
-    """
-    Este código utiliza la biblioteca MediaPipe para detectar puntos de referencia de manos en una imagen
-    y calcular los ángulos entre los diferentes handmarks de los dedos. Primero, configura un diccionario
-    de las coordenadas x e y de la tip, pip, y mcp (articulación metacarpiano-falángica) de cada dedo.
-    Luego usa el producto escalar y la función arcocoseno para calcular los ángulos entre cada uno de
-    los handmarks de los dedos. Los ángulos se almacenan en una lista de ángulos y la función los devuelve.
-    El código convierte la lista de puntos en una matriz de forma (6, 3, 2) para realizar
-    operaciones de vector de bloque.
-    Se calcula la distancia y se calculan 6 ángulos.
-    El código devuelve la lista de ángulos y la posición de la punta del dedo meñique en la imagen.
-    """
-
     def get_xy(index):
         return [
             int(hand_landmarks.landmark[index].x * width),

@@ -6,9 +6,6 @@ import os
 
 
 async def process(image_path):
-    """
-    Process one image with mediapipe with image_path and return result in dict
-    """
     mp_hands = mp.solutions.hands
     with mp_hands.Hands(
         static_image_mode=True, max_num_hands=2, min_detection_confidence=0.5
