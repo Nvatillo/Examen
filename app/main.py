@@ -2,7 +2,7 @@ from fastapi import FastAPI, File, UploadFile
 from api.endpoints import processing_images
 from utils.save_image_temporal import save_in_disk
 
-
+ 
 app = FastAPI()
 
 @app.post("/processing_images")
